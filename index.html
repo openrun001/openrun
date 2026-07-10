@@ -22,7 +22,8 @@
       <a class="brand" href="#top" aria-label="OPEN RUN 홈">OPEN RUN</a>
       <nav class="desktop-nav" aria-label="주요 메뉴">
         <a href="#why">왜 오픈런인가</a>
-        <a href="#portfolio">포트폴리오</a>
+        <a href="#gallery">전체 갤러리</a>
+        <a href="#videos">촬영 영상</a>
         <a href="#process">촬영과정</a>
         <a href="#faq">FAQ</a>
       </nav>
@@ -116,6 +117,55 @@
       </div>
     </section>
 
+
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <p class="section-label reveal">FULL PORTFOLIO</p>
+        <div class="gallery-heading">
+          <div>
+            <h2 class="section-title reveal">더 많은 촬영 결과를<br>업종별로 확인하세요.</h2>
+            <p class="section-lead reveal">
+              버튼을 누르면 회·해산물, 고기, 한식, 카페 사진만 골라 볼 수 있습니다.
+              사진을 클릭하면 큰 화면으로 확대됩니다.
+            </p>
+          </div>
+          <div class="gallery-filters reveal" aria-label="포트폴리오 필터">
+            <button class="filter-button active" data-filter="all">전체</button>
+            <button class="filter-button" data-filter="seafood">회·해산물</button>
+            <button class="filter-button" data-filter="meat">고기</button>
+            <button class="filter-button" data-filter="korean">한식</button>
+            <button class="filter-button" data-filter="cafe">카페</button>
+          </div>
+        </div>
+
+        <!-- gallery.js의 GALLERY_ITEMS 목록에 사진을 계속 추가하면 이곳에 자동 표시됩니다. -->
+        <div class="gallery-grid" id="galleryGrid"></div>
+        <button class="load-more-button" id="loadMoreButton" type="button">사진 더 보기</button>
+      </div>
+    </section>
+
+    <section class="section video-section" id="videos">
+      <div class="container">
+        <p class="section-label reveal">BEHIND THE SCENES</p>
+        <h2 class="section-title reveal">촬영 현장도<br>영상으로 보여드립니다.</h2>
+        <p class="section-lead reveal">
+          유튜브 링크는 홈페이지 안에서 바로 재생됩니다.
+          인스타그램·네이버 영상은 버튼을 눌러 원본 페이지에서 볼 수 있습니다.
+        </p>
+
+        <!-- gallery.js의 VIDEO_ITEMS 목록에 영상 링크를 추가하면 자동 표시됩니다. -->
+        <div class="video-grid" id="videoGrid"></div>
+      </div>
+    </section>
+
+    <dialog class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose" aria-label="닫기">×</button>
+      <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="이전 사진">‹</button>
+      <img id="lightboxImage" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+      <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="다음 사진">›</button>
+    </dialog>
+
     <section class="section media-section">
       <div class="container">
         <p class="section-label reveal">ONE SHOOT, MANY USES</p>
@@ -203,6 +253,7 @@
     </div>
   </footer>
 
+  <script src="gallery.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
